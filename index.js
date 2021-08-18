@@ -30,7 +30,7 @@ function handleText(text) {
     stringsearch === v[exclamationPointCount++];
   }
   for (i = 0; i < exclamationPointCount; i++) {
-    v = v.replace('!', ' ' + faces[Math.floor(Math.random() * faces.length)] + ' ');
+    v = v.replace('!', ' ' + faces[Math.floor(Math.random() * faces.length)]);
   }
   return v;
 }

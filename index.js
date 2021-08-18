@@ -34,3 +34,7 @@ function handleText(text) {
   }
   return v;
 }
+
+function gotoSource() {
+  window.open('https://github.com/Dankyss/OWOifier', '_blank').focus();
+}

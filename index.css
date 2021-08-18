@@ -1,61 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 html,
 body {
-  font-family: 'Muli', sans-serif;
   color: #e8e6e3;
-  height: 100%;
-  text-align: center;
   background-color: #181a1b;
 }
 
-#title {
-  font-size: 48px;
+.title {
+  font-size: 50px;
   margin-bottom: -15px;
 }
 
-#letterBox {
+.topArea {
+  text-align: center;
+  font: inherit;
+  font-family: 'Rubik';
+}
+
+.letterBox {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  font: inherit;
+  font-family: 'Rubik';
   width: 50%;
   height: 200px;
   resize: none;
-  font-family: 'Muli', sans-serif;
   font-size: 18px;
   color: #e8e6e3;
-  border: 2px solid #a0a0a0;
+  border: 2px solid #4b5154;
   background-color: #181a1b;
   border-radius: 8px;
   padding: 4px;
 }
 
-#letterBox2 {
+.letterBox2 {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  font: inherit;
+  font-family: 'Rubik';
   width: 50%;
   height: 200px;
   resize: none;
-  font-family: 'Muli', sans-serif;
   font-size: 18px;
   color: #e8e6e3;
-  border: 2px solid #a0a0a0;
+  border: 2px solid #4b5154;
   background-color: #181a1b;
   border-radius: 8px;
   padding: 4px;
 }
 
-#letterBox:focus,
-#letterCount:focus,
-#clearButton:focus,
-#letterBox2 {
+.textArea1 {
+  padding-top: 25px;
+}
+
+.textArea2 {
+  padding-top: 20px;
+}
+
+.letterBox:focus,
+.letterCount:focus,
+.clearButton:focus,
+.sourceButton:focus,
+.letterBox2 {
   outline: none;
 }
 
-#clearButton {
-  font-family: 'Muli', sans-serif;
+.clearButton,
+.sourceButton {
   font-size: 22px;
   width: 175px;
   height: 60px;
   color: #e8e6e3;
-  background: hsl(175, 65%, 25%);
+  background: #5a5a5a;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
+  font: inherit;
+  font-family: 'Rubik';
 }
 
-#sourcelink {
+.sourcelink {
   padding-top: 10px;
+  font: inherit;
+  font-family: 'Rubik';
+}
+
+.linkText {
+  color: #e3e4e8;
+}
+
+.linkText:active {
+  color: #e3e4e8;
+}
+
+.bottomText {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 25px;
 }

@@ -87,20 +87,6 @@ body {
   font-family: 'Rubik';
 }
 
-.sourcelink {
-  padding-top: 10px;
-  font: inherit;
-  font-family: 'Rubik';
-}
-
-.linkText {
-  color: #e3e4e8;
-}
-
-.linkText:active {
-  color: #e3e4e8;
-}
-
 .bottomText {
   display: block;
   position: relative;

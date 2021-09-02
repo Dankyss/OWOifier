@@ -1,6 +1,6 @@
 # OWOifier
 
-[Want to see it in action? Check out the codepen](https://codepen.io/dankyss/pen/JjNQReJ)
+[Want to see it in action?](https://owoifier.pages.dev)
 
 [Original Repo (replit.com)](https://replit.com/@Black_is_Back/OWOifier)
 

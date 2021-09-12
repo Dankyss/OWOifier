@@ -10,6 +10,7 @@
       type="image/png"
       href="https://raw.githubusercontent.com/Dankyss/OWOifier/master/imgs/logo.png"
     />
+
     <meta content="The OwOifier" property="og:title" />
     <meta content="OwO-fies any text!" property="og:description" />
     <meta content="https://owoifier.pages.dev" property="og:url" />
@@ -20,27 +21,35 @@
     <meta name="twitter:creator" content="@dankysdank" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-108K5QR9PK"></script>
 
     <script src="./index.js"></script>
     <link href="./index.css" rel="stylesheet" type="text/css" />
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-108K5QR9PK');
+    </script>
   </head>
-  <body>
+  <body class="darkMode">
     <div class="topArea">
       <h1 class="title">OWOifier</h1>
       <h4 class="subtitle">Adapted from the OWO chrome extension by leafysweetsgarden</h4>
       <h4 class="subtitle2">HTML adapted from "Random Capitalizer" by @CyanCoding on repl.it</h4>
-      <h4 class="subtitle3">
-        Code merged by @Black_is_Back on repl.it (Note I programmed absolutely nothing here, I just merged the two
-        programs together)
-      </h4>
+      <h4 class="subtitle3">Code merged by @Black_is_Back on repl.it</h4>
       <h4 class="subtitle4">Dark theme, CSS Rework, and formatting fixes by Dankyss</h4>
     </div>
 
     <div class="textArea1">
-      <textarea class="letterBox" id="letterBox" placeholder="Enter text to convert here."></textarea>
+      <textarea class="letterBox boxDarkMode" id="letterBox" placeholder="Enter text to convert here."></textarea>
     </div>
     <div class="textArea2">
-      <textarea class="letterBox2" id="letterBox2" placeholder="Entered text will go here."></textarea>
+      <textarea class="letterBox2 boxDarkMode" id="letterBox2" placeholder="Entered text will go here."></textarea>
     </div>
 
     <div class="bottomText">

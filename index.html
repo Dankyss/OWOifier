@@ -5,38 +5,156 @@
     <meta name="viewport" content="width=device-width" />
 
     <title>OwOifier</title>
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="https://raw.githubusercontent.com/Dankyss/OWOifier/master/imgs/logo.png"
-    />
+    <link rel="shortcut icon" type="image/png" href="./logo.png" />
 
     <meta content="The OwOifier" property="og:title" />
     <meta content="OwO-fies any text!" property="og:description" />
     <meta content="https://owoifier.pages.dev" property="og:url" />
-    <meta content="https://raw.githubusercontent.com/Dankyss/OWOifier/master/imgs/logo.png" property="og:image" />
+    <meta content="https://owoifier.pages.dev/logo.png" property="og:image" />
     <meta content="#e8e6e3" data-react-helmet="true" name="theme-color" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@dankysdank" />
     <meta name="twitter:creator" content="@dankysdank" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-108K5QR9PK"></script>
 
-    <script src="./index.js"></script>
-    <link href="./index.css" rel="stylesheet" type="text/css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+      body {
+        color: #e8e6e3;
+        background-color: #181a1b;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+
+      .title {
+        font-size: 50px;
+        margin-bottom: -15px;
+      }
+
+      .topArea {
+        text-align: center;
+        font: inherit;
+        font-family: 'Rubik';
+      }
+
+      .letterBox {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        font: inherit;
+        font-family: 'Rubik';
+        width: 50%;
+        height: 200px;
+        resize: none;
+        font-size: 18px;
+        color: #e8e6e3;
+        border: 2px solid #4b5154;
+        background-color: #181a1b;
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      .letterBox2 {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        font: inherit;
+        font-family: 'Rubik';
+        width: 50%;
+        height: 200px;
+        resize: none;
+        font-size: 18px;
+        color: #e8e6e3;
+        border: 2px solid #4b5154;
+        background-color: #181a1b;
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      .textArea1 {
+        padding-top: 25px;
+      }
+
+      .textArea2 {
+        padding-top: 20px;
+      }
+
+      .letterBox:focus,
+      .letterCount:focus,
+      .clearButton:focus,
+      .sourceButton:focus,
+      .letterBox2 {
+        outline: none;
+      }
+
+      .clearButton,
+      .sourceButton {
+        font-size: 22px;
+        width: 175px;
+        height: 60px;
+        color: #e8e6e3;
+        background: #5a5a5a;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font: inherit;
+        font-family: 'Rubik';
+      }
+
+      .bottomText {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding-top: 25px;
+      }
+    </style>
 
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
+      $(function () {
+        $('#letterBox').keyup(function () {
+          var characters = $('#letterBox').val();
+          $('#letterBox2').val(handleText(characters));
+        });
 
-      gtag('config', 'G-108K5QR9PK', {
-        cookie_domain: 'owoifier.pages.dev',
-        cookie_flags: 'SameSite=None;Secure',
+        $('#clearButton').click(function () {
+          $('#letterBox').val('');
+          $('#letterBox2').val('');
+        });
       });
+
+      var faces = ['(・`ω´・)', ';;w;;', 'owo', 'UwU', '>w<', '^w^'];
+
+      function handleText(text) {
+        var v = text;
+
+        v = v.replace(/(?:r|l)/g, 'w');
+        v = v.replace(/(?:R|L)/g, 'W');
+        v = v.replace(/n([aeiou])/g, 'ny$1');
+        v = v.replace(/N([aeiou])/g, 'Ny$1');
+        v = v.replace(/N([AEIOU])/g, 'Ny$1');
+        v = v.replace(/ove/g, 'uv');
+
+        var exclamationPointCount = 0;
+        var i;
+        var stringsearch = '!';
+        //for loop counts the # of individual exclamation points
+        for (var i = 0; i < v.length; i++) {
+          stringsearch === v[exclamationPointCount++];
+        }
+        for (i = 0; i < exclamationPointCount; i++) {
+          v = v.replace('!', ' ' + faces[Math.floor(Math.random() * faces.length)]);
+        }
+        return v;
+      }
     </script>
   </head>
   <body class="darkMode">
@@ -57,7 +175,13 @@
 
     <div class="bottomText">
       <input class="clearButton" id="clearButton" type="button" value="Clear" />
-      <input class="sourceButton" id="sourceButton" type="button" value="Source" onclick="gotoSource()" />
+      <input
+        class="sourceButton"
+        id="sourceButton"
+        type="button"
+        value="Source"
+        onclick="window.open('https://github.com/Dankyss/OWOifier');"
+      />
     </div>
   </body>
 </html>
